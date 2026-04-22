@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Резюме</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button id="theme-toggle" class="toggle-button">🌙</button>
+
+    <div class="cv-container">
+        <aside class="sidebar">
+            <header>
+                <h1 class="name">Мар'яна<br>Стасів</h1>
+                <p>Студентка кібербезпеки</p>
+            </header>
+
+            <section class="contacts">
+                <h2>Контакти</h2>
+                <p>Телефон: 123-456-7890</p>
+                <p>Пошта: mary.stasiv@gmail.com</p>
+                <p>Місто: Львів, Україна</p>
+            </section>
+
+            <section class="skills">
+                <h2>Навички</h2>
+                <ul>
+                    <li>HTML5 & CSS3</li>
+                    <li>JavaScript</li>
+                    <li>React (в процесі вивчення)</li>
+                    <li>Основи кібербезпеки</li>
+                    <li>Git</li>
+                    <li>Відповідальність</li>
+                    <li>Комунікабельність</li>
+                </ul>
+            </section>
+        </aside>
+
+        <main class="main-content">
+            <section class="about-me">
+                <h2>Про себе</h2>
+                <hr>
+                <p>Студентка 3-го курсу спеціальності "Кібербезпека". Активний член української скаутської організації Пласт. Ефективно поєдную академічне навчання з організацією соціальних проектів та розвитком технічних навичок.</p>
+            </section>
+
+            <section class="experience">
+                <h2>Досвід</h2>
+                <hr>
+                <div class="exp-item">
+                    <h3>Розробка власних проектів</h3>
+                    <p>Створення гри BTW та вебсайту для книжкового видавництва. Практичне застосування знань з верстки та логіки додатків.</p>
+                </div>
+                <div class="exp-item">
+                    <h3>Академічна практика</h3>
+                    <p>Виконання лабораторних робіт з розгортання React-додатків та налаштування середовища розробки.</p>
+                </div>
+            </section>
+
+            <section class="education">
+                <h2>Освіта</h2>
+                <hr>
+                <p><strong>НУ "Львівська політехніка"</strong></p>
+                <p>Спеціальність "Кібербезпека", 2023 — дотепер</p>
+            </section>
+        </main>
+    </div>
+
+    <section class="reviews-container">
+        <h2>Відгуки попередніх роботодавців</h2>
+        <div id="reviews-list"></div>
+    </section>
+
+    <footer class="footer">
+        <p>System Info</p>
+        <p id="footer-info" class="footer-info">No system info found</p>
+    </footer>
+
+    <div id="contact-modal" class="modal-overlay">
+        <div class="modal-card">
+            <button id="close-modal" class="close-icon">&times;</button>
+            <h3>Зворотній зв'язок</h3>
+            <p>Залиште повідомлення, і я зв'яжуся з вами найближчим часом.</p>
+            
+            <form action="https://formspree.io/f/xwvwglyv" method="POST" class="feedback-form">
+                <input type="text" name="name" placeholder="Ваше ім'я" required>
+                <input type="email" name="email" placeholder="Електронна пошта" required>
+                <input type="tel" name="phone" placeholder="Номер телефону">
+                <textarea name="message" placeholder="Ваше повідомлення" rows="4"></textarea>
+                <button type="submit" class="submit-btn">Відправити</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
