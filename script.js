@@ -32,12 +32,13 @@ fetch(`https://jsonplaceholder.typicode.com/posts/${variant}/comments`)
 
 document.addEventListener('DOMContentLoaded', () => {
     const modal = document.getElementById('contact-modal');
-    setTimeout(() => {
+    let modalTimer = setTimeout(() => {
         modal.style.display = 'flex';
-    }, 6000);
+    }, 60000);
 
     document.getElementById('close-modal').onclick = () => {
         modal.style.display = 'none';
+        clearTimeout(modalTimer);
     };
 });
 
