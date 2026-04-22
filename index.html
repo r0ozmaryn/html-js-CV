@@ -8,6 +8,22 @@
 <body>
     <button id="theme-toggle" class="toggle-button">🌙</button>
 
+    <div id="contact-modal" class="modal-overlay">
+        <div class="modal-card">
+            <button id="close-modal" class="close-icon">&times;</button>
+            <h3>Зворотній зв'язок</h3>
+            <p>Залиште повідомлення, і я зв'яжуся з вами найближчим часом.</p>
+            
+            <form action="https://formspree.io/f/xwvwglyv" method="POST" class="feedback-form">
+                <input type="text" name="name" placeholder="Ваше ім'я" required>
+                <input type="email" name="email" placeholder="Електронна пошта" required>
+                <input type="tel" name="phone" placeholder="Номер телефону">
+                <textarea name="message" placeholder="Ваше повідомлення" rows="4"></textarea>
+                <button type="submit" class="submit-btn">Відправити</button>
+            </form>
+        </div>
+    </div>
+
     <div class="cv-container">
         <aside class="sidebar">
             <header>
@@ -74,22 +90,6 @@
         <p>System Info</p>
         <p id="footer-info" class="footer-info">No system info found</p>
     </footer>
-
-    <div id="contact-modal" class="modal-overlay">
-        <div class="modal-card">
-            <button id="close-modal" class="close-icon">&times;</button>
-            <h3>Зворотній зв'язок</h3>
-            <p>Залиште повідомлення, і я зв'яжуся з вами найближчим часом.</p>
-            
-            <form action="https://formspree.io/f/xwvwglyv" method="POST" class="feedback-form">
-                <input type="text" name="name" placeholder="Ваше ім'я" required>
-                <input type="email" name="email" placeholder="Електронна пошта" required>
-                <input type="tel" name="phone" placeholder="Номер телефону">
-                <textarea name="message" placeholder="Ваше повідомлення" rows="4"></textarea>
-                <button type="submit" class="submit-btn">Відправити</button>
-            </form>
-        </div>
-    </div>
 
     <script src="script.js"></script>
 </body>

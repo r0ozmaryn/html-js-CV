@@ -8,16 +8,27 @@ const variant = 28;
 const reviewsList = document.getElementById('reviews-list');
 
 fetch(`https://jsonplaceholder.typicode.com/posts/${variant}/comments`)
-    .then(res => res.json())
-    .then(data => {
-        data.forEach(comment => {
-            const div = document.createElement('div');
-            div.className = 'review-card review-item';
-            div.innerHTML = `<strong>${comment.name}</strong><p>${comment.body}</p>`;
-            reviewsList.appendChild(div);
-        });
-    })
-    .catch(error => console.error('Помилка завантаження:', error));
+.then(res => res.json())
+.then(data => {
+    data.slice(0, 4).forEach(comment => {
+        const div = document.createElement('div');
+        div.className = 'review-card review-item';
+        
+        const initial = comment.email[0];
+        const nickname = comment.email.split('@')[0];
+
+        div.innerHTML = `
+            <div class="review-avatar">${initial}</div>
+            <div class="review-content">
+                <strong>${nickname}</strong>
+                <span class="review-author-email">${comment.email}</span>
+                <p class="review-text">"${comment.body}"</p>
+            </div>
+        `;
+        reviewsList.appendChild(div);
+    });
+})
+.catch(error => console.error('Помилка завантаження:', error));
 
 document.addEventListener('DOMContentLoaded', () => {
     const modal = document.getElementById('contact-modal');
@@ -29,8 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
         modal.style.display = 'none';
     };
 });
-
-
 
 const themeBtn = document.getElementById('theme-toggle');
 const hour = new Date().getHours();

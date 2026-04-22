@@ -130,25 +130,70 @@ hr {
 
 .reviews-container {
     max-width: 900px;
-    margin: 30px auto;
+    margin: 40px auto;
+    padding: 20px;
     background: var(--white);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    border-radius: 8px;
-    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+    border-radius: 12px;
 }
 
 .reviews-container h2 {
-    padding: 10px 20px;
-    font-weight: 800;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    font-weight: 900;
 }
 
 .review-item {
+    display: flex;
+    gap: 20px;
     border-left: 5px solid var(--primary-color);
     background-color: var(--bg-color);
-    margin: 30px 20px;
-    padding: 15px;
-    margin-bottom: 15px;
-    border-radius: 4px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.review-item:hover {
+    transform: translateX(5px);
+}
+
+.review-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--accent-color);
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    flex-shrink: 0;
+}
+
+.review-content strong {
+    display: block;
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-bottom: 2px;
+}
+
+.review-author-email {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--primary-color);
+    opacity: 0.7;
+    margin-bottom: 10px;
+}
+
+.review-text {
+    font-style: italic;
+    line-height: 1.6;
+    color: var(--text-color);
 }
 
 .modal-overlay {
